@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background-color: darkslategray;
+	font-family: "sans-serif";
+	}
+h1 {
+	color: gray;
+	font-family: "sans-serif";
+	text-align: center;
+}
+h2 {
+	color: gray;
+	font-family: "sans-serif";
+	text-align: center;
+}

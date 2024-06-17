@@ -1,16 +1,16 @@
 @charset "utf-8";
 /* CSS Document */
 body {
-	background-color: darkslategray;
+	background-color:#282828;;
 	font-family: "sans-serif";
 	}
 h1 {
-	color: gray;
+	color:#635ea6;;
 	font-family: "sans-serif";
 	text-align: center;
 }
 h2 {
-	color: gray;
+	color: #635ea6;
 	font-family: "sans-serif";
 }
 .grid-container {
@@ -25,7 +25,7 @@ h2 {
 		"Home Contact About"
 }
 p {
-	color: gray;
+	color:#908f93;
 	font-family: "sans-serif";
 	text-align: center;
 }

@@ -28,4 +28,17 @@ p {
 	color:#908f93;
 	font-family: "sans-serif";
 	text-align: center;
+	margin-top: 100px;
+ 	margin-bottom: 100px;
+  	margin-right: 150px;
+  	margin-left: 80px;
+}
+img{
+	height: 250px;
+	width: 250px;
+	align-content: left;
+	margin-top: 100px;
+ 	margin-bottom: 100px;
+  	margin-right: 150px;
+  	margin-left: 80px;	
 }

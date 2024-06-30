@@ -28,7 +28,51 @@
 	<a href="https://kennesaw.joinhandshake.com/stu/users/42566688">Handshake</a>
 	</p>
 	<p>
-	You can also shoot me an email at: cmyers49@students.kennesaw.edu
+	<form id="form">
+		<div class="field">
+			<label for="from_name">Email Address</label>
+			<input type="text" name="from_name" id="from_name"><br>
+		</div>
+		<br>
+		<div class="field">
+			<label for="message">Message</label>
+			<input type="text" name="message" id="message"><br>
+		</div>
+		<br>
+		<input type="submit" id="button" value="Send Email" >
+	</form>
+	<script type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+		(function(){
+			emailjs.init({
+				publicKey: "LLYuY_o0nMHMlKO8W",
+			});
+		})();
+	</script>
+	<script type="text/javascript">
+		const btn = document.getElementById('button');
+
+		document.getElementById('form')
+				.addEventListener('submit', function(event) {
+					event.preventDefault();
+
+					btn.value = 'Sending...';
+
+					const serviceID = 'default_service';
+					const templateID = 'template_8a16mts';
+
+					emailjs.sendForm(serviceID, templateID, this)
+							.then(() => {
+								btn.value = 'Send Email';
+								alert('Sent!');
+							}, (err) => {
+								btn.value = 'Send Email';
+								alert(JSON.stringify(err));
+							});
+				});
+	</script>
 	</p>
 	
 </body>	

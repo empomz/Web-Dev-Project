@@ -24,11 +24,12 @@
 		You can find me at:
 	</p>
 	<p>
-	<a href="https://www.linkedin.com/in/cole-myers-807126265/">LinkedIn</a>
+	<a href="https://www.linkedin.com/in/cole-myers-807126265/">LinkedIn</a> <!-- Links to my LinkedIn and Handshake -->
 	<a href="https://kennesaw.joinhandshake.com/stu/users/42566688">Handshake</a>
 	</p>
 	<p>
-	<form id="form">
+	You can also shoot me an email by filling out the form below!
+	<form id="form"> <!-- Creates a form which takes in an email address and a message from the user, when submitted it emails it to me -->
 		<div class="field">
 			<label for="from_name">Email Address</label>
 			<input type="text" name="from_name" id="from_name"><br>
@@ -41,40 +42,14 @@
 		<br>
 		<input type="submit" id="button" value="Send Email" >
 	</form>
+	<!-- Below are two script tags, one goes to the EmailJS SDK and the other goes to my script.js file-->
 	<script type="text/javascript"
 			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 	</script>
-	<script type="text/javascript">
-		(function(){
-			emailjs.init({
-				publicKey: "LLYuY_o0nMHMlKO8W",
-			});
-		})();
-	</script>
-	<script type="text/javascript">
-		const btn = document.getElementById('button');
-
-		document.getElementById('form')
-				.addEventListener('submit', function(event) {
-					event.preventDefault();
-
-					btn.value = 'Sending...';
-
-					const serviceID = 'default_service';
-					const templateID = 'template_8a16mts';
-
-					emailjs.sendForm(serviceID, templateID, this)
-							.then(() => {
-								btn.value = 'Send Email';
-								alert('Sent!');
-							}, (err) => {
-								btn.value = 'Send Email';
-								alert(JSON.stringify(err));
-							});
-				});
+	<script type="text/javascript"
+		src= "script.js">
 	</script>
 	</p>
-	
 </body>	
 </html>
 	
